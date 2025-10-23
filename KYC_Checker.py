@@ -1,4 +1,4 @@
-import google.generativeai as genai
+uimport google.generativeai as genai
 from IPython.display import display
 from IPython.display import Markdown
 import PIL.Image
@@ -14,7 +14,7 @@ import os
 # if "GOOGLE_API_KEY" not in os.environ:
 #     os.environ["GOOGLE_API_KEY"] = userdata.get('api_key')
 
-genai.configure(api_key="AIzaSyAFYEOYkb7Lg-klE4slgwwV0PekxVvo5ag")
+genai.configure(api_key="")
 
 
 for m in genai.list_models():
@@ -32,7 +32,7 @@ print(aadhar_response.text)
 
 client = InferenceClient(
     provider="fireworks-ai",
-    api_key="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",
+    api_key="",
 )
 #response="069375628506,Kimberly Williams,2005-04-06,70291 Anthony Tunnel Suite 374 Taylorfurt, MH 38495,+1-468-900-8044,johnsonrobert@example.com"
 messages = [
@@ -141,5 +141,6 @@ rag_chain = (
 
 query = "Explain the basic rules of lawn tennis."
 result = rag_chain.invoke(aadhar_response.text)
+
 
 print("\n🔹 Gemini RAG Answer:\n", result)
