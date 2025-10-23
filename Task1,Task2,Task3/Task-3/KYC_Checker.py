@@ -43,7 +43,7 @@ print(aadhar_response.text)
 
 # client = InferenceClient(
 #     provider="fireworks-ai",
-#     api_key="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",
+#     api_key=
 # )
 #response="069375628506,Kimberly Williams,2005-04-06,70291 Anthony Tunnel Suite 374 Taylorfurt, MH 38495,+1-468-900-8044,johnsonrobert@example.com"
 messages = [
@@ -60,7 +60,7 @@ messages = [
 ]
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",       # or "gemini-1.5-pro" for higher quality
-    google_api_key="AIzaSyAFYEOYkb7Lg-klE4slgwwV0PekxVvo5ag",
+    google_api_key="",
     temperature=0.6 #Temperature contrls the randomness of the output, lesser value gives more focused output
 )
 response = llm.invoke(messages)
@@ -112,7 +112,7 @@ vectorstore = PineconeVectorStore.from_documents(
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",       # or "gemini-1.5-pro" for higher quality
-    google_api_key="AIzaSyAFYEOYkb7Lg-klE4slgwwV0PekxVvo5ag",
+    google_api_key="",
     temperature=0.6 #Temperature contrls the randomness of the output, lesser value gives more focused output
 )
 
@@ -147,5 +147,6 @@ rag_chain = (
 
 query = f"Check is this is there in the dataset{aadhar_response.text}"
 result = rag_chain.invoke(query)
+
 
 print("\n🔹 Gemini RAG Answer:\n", result)
