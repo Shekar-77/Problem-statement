@@ -1,3 +1,5 @@
-pathway[xpack-llm]
+langchain
+langgraph
 python-dotenv
-
+streamlit
+huggingface-hub
