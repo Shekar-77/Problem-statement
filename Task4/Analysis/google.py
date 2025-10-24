@@ -7,7 +7,7 @@ from huggingface_hub import InferenceClient
 
 client = InferenceClient(
     provider="fireworks-ai",
-    api_key="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",
+    api_key="",
 )
 
 def analyze_google_search(state: State):
@@ -21,5 +21,6 @@ def analyze_google_search(state: State):
     model="meta-llama/Llama-3.1-8B-Instruct",
     messages=messages
     )
+
 
     return {" google_result_analysis":reply.choices[0].message["content"]}
