@@ -8,7 +8,7 @@ from huggingface_hub import InferenceClient
 
 client = InferenceClient(
     provider="fireworks-ai",
-    api_key="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",
+    api_key="",
 )
 
 def analyze_bing_search(state: State):
@@ -22,4 +22,5 @@ def analyze_bing_search(state: State):
     model="meta-llama/Llama-3.1-8B-Instruct",
     messages=messages
     )
+
     return {"bing_result_analysis":reply.choices[0].message["content"]}
