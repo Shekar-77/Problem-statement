@@ -5,7 +5,7 @@ from huggingface_hub import InferenceClient
 
 client = InferenceClient(
     provider="fireworks-ai",
-    api_key="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",
+    api_key="",
 )
 
 def analyze_user_chat_memory(state: State):
@@ -19,5 +19,6 @@ def analyze_user_chat_memory(state: State):
     model="meta-llama/Llama-3.1-8B-Instruct",
     messages=messages
     )
+
 
     return {"User_chat_memory_analysis":user_chat_memory_result}
