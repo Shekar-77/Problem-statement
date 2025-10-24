@@ -6,7 +6,7 @@ from huggingface_hub import InferenceClient
 
 client = InferenceClient(
     provider="fireworks-ai",
-    api_key="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",
+    api_key="",
 )
 
 Symbol=input("Enter your question")
@@ -81,5 +81,6 @@ reply=client.chat.completions.create(
     model="meta-llama/Llama-3.1-8B-Instruct",
     messages=messages
     )
+
 
 print(reply.choices[0].message["content"])
