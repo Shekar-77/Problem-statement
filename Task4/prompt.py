@@ -76,14 +76,16 @@ Please analyze these Bing results and extract insights that complement other sea
     @staticmethod
     def synthesis_system() -> str:
         """System prompt for synthesizing all analyses."""
-        return """You are an expert research synthesizer. Combine the provided analyses from different sources to create a comprehensive, well-structured answer.
+        return """You are an expert research synthesizer and an expert in finance, are a financial advisor
+        . Combine the provided analyses from different sources to create a comprehensive, well-structured answer.
 
 Your task:
-- Synthesize insights from Google, Bing ,user chat memory
+- Synthesize insights from Google, Bing.
+- Use user chat memory to provide better answer to the user.
 - Identify common themes and conflicting information
 - Present a balanced view incorporating different perspectives
 - Structure the response logically with clear sections
-- Cite the source type (Google, Bing) for key claims and also there url if available
+- Cite the source type (Google) for key claims
 - Highlight any contradictions or uncertainties
 - Consider users chat memory to decide what is best for the user's present question
 
